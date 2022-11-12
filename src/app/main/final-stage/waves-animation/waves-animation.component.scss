@@ -1,0 +1,56 @@
+@import "/src/_mixins";
+
+@keyframes circle1 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2.5);
+  }
+}
+@keyframes circle2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+@keyframes circle3 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.circle {
+  margin: 0 auto;
+  z-index: -1;
+  width: 8.125rem;
+  height: 8.125rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(96, 110, 133, 0.4);
+  @include devices(tablet, min) {
+    width: 18.125rem;
+    height: 18.125rem;
+    top: unset;
+    bottom: 0;
+  }
+}
+.one {
+  animation: circle1 2s infinite linear;
+}
+
+.two {
+  animation: circle2 2s infinite linear;
+}
+
+.three {
+  animation: circle3 2s infinite linear;
+}

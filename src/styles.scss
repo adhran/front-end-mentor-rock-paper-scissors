@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "/src/_globals";
+@import "/src/_variables";
+@import "/src/_mixins";
+
+body {
+  background-image: linear-gradient(to bottom, $radial-bg);
+  background-repeat: no-repeat;
+}

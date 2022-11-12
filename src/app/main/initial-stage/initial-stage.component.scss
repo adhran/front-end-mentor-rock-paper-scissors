@@ -1,0 +1,67 @@
+@import "/src/_mixins";
+
+.game {
+  position: relative;
+  max-width: 340px;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 285px;
+  position: relative;
+  @include devices(tablet, min) {
+    max-width: 480px;
+    height: 440px;
+  }
+  > .bg-triangle {
+    margin: 0 auto;
+    max-width: inherit;
+    @include devices(tablet, min) {
+      padding: 5.125rem;
+      padding-bottom: 0;
+    }
+    > svg {
+      scale: 0.7;
+      margin-top: 20px;
+
+      @include devices(tablet, min) {
+        scale: 1;
+        margin-top: 0;
+      }
+    }
+  }
+
+  > .btn-rock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: fit-content;
+    @include devices(tablet, min) {
+      scale: 0.65;
+      bottom: -36px;
+    }
+  }
+
+  > .btn-scissor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include devices(tablet, min) {
+      scale: 0.65;
+      right: -36px;
+      top: -36px;
+    }
+  }
+
+  > .btn-paper {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include devices(tablet, min) {
+      scale: 0.65;
+      left: -36px;
+      top: -36px;
+    }
+  }
+}

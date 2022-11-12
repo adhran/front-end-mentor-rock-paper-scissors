@@ -1,0 +1,79 @@
+@import "/src/_mixins";
+@import "/src/_variables";
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 70px;
+  @include devices(tablet, min) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  > .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include devices(tablet, min) {
+      flex-direction: column-reverse;
+
+      justify-content: flex-end;
+    }
+
+    > p {
+      color: white;
+      margin: 1rem 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 14px;
+      @include devices(tablet, min) {
+        font-size: 20px;
+        margin: 4.125rem 0;
+      }
+    }
+    > .blank-circle {
+      border-radius: 50%;
+      margin: 10px 0;
+      width: 110px;
+      height: 110px;
+      background-color: rgba(0, 0, 0, 0.2);
+
+      @include devices(tablet, min) {
+        height: 190px;
+        width: 190px;
+        margin-bottom: 0;
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  > .result {
+    grid-column: 2 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+
+    @include devices(tablet, min) {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      justify-content: center;
+    }
+    > h1 {
+      color: white;
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+    > button {
+      background-color: white;
+      color: $dark-text;
+      height: 48px;
+      width: 220px;
+      border-radius: 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+  }
+}

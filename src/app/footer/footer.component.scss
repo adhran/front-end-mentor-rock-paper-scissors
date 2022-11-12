@@ -1,0 +1,26 @@
+@import "/src/_variables";
+@import "/src/_mixins";
+
+.footer {
+  position: absolute;
+  width: 132px;
+
+  bottom: 55px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  @include devices(tablet, min) {
+    left: unset;
+    right: 32px;
+    bottom: 28px;
+  }
+
+  > button {
+    background-color: transparent;
+    border: 2px solid $header-outline;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding: 11px 39px 7px 39px;
+  }
+}

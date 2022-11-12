@@ -1,0 +1,69 @@
+@import "/src/variables";
+@import "/src/_mixins";
+
+.game-header {
+  height: 6rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  @include devices(tablet, min) {
+    height: 9.125rem;
+  }
+
+  border: 0.1875rem solid $header-outline;
+  border-radius: 0.625rem;
+
+  margin: 0 auto 1.875rem auto;
+  padding: 0.625rem 1.375rem;
+
+  > .game-title-logo {
+    > svg {
+      scale: 0.52;
+      transform: translate(-45%, -25%);
+      @include devices(tablet, min) {
+        scale: 0.9;
+        transform: translate(0, 0);
+        margin-top: 14px;
+      }
+    }
+  }
+
+  > .score-board {
+    width: 5rem;
+    background-color: white;
+    border-radius: 0.375rem;
+
+    text-align: center;
+
+    padding: 0.5rem 0;
+    @include devices(tablet, min) {
+      padding: 1rem 0;
+    }
+
+    > p:first-child {
+      color: $score-text;
+      font-size: 0.75rem;
+      font-weight: 600;
+
+      @include devices(tablet, min) {
+        font-size: 1rem;
+      }
+    }
+    > p:last-child {
+      color: $dark-text;
+      font-size: 2.25rem;
+      letter-spacing: -5px;
+      font-weight: 700;
+      margin-right: 6px;
+      @include devices(tablet, min) {
+        font-size: 3.5rem;
+        letter-spacing: -8px;
+      }
+    }
+    @include devices(tablet, min) {
+      width: 9.375rem;
+      height: 7.125rem;
+    }
+  }
+}

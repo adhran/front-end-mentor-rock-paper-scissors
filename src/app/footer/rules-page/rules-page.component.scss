@@ -1,0 +1,77 @@
+@import "../../../_variables";
+@import "../../../_mixins";
+.rules-page {
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: fade-in 300ms ease-in-out forwards;
+  @include devices(tablet, min) {
+    height: 400px;
+    max-width: 414px;
+    margin: auto;
+    border-radius: 0.5rem;
+  }
+  > h3 {
+    margin-top: 6.25rem;
+    font-size: 1.5rem;
+    color: $dark-text;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.0625rem;
+    @include devices(tablet, min) {
+      position: absolute;
+      left: 2.375rem;
+      margin-top: 2.125rem;
+    }
+  }
+
+  > .rules-img {
+    margin: 0 auto;
+    max-width: 19.375rem;
+    margin-top: 7.25rem;
+    @include devices(tablet, min) {
+      margin-top: 6.25rem;
+    }
+
+    > svg {
+      width: 100%;
+      height: 17.5rem;
+    }
+  }
+
+  > .close-btn {
+    margin-top: 9.75rem;
+    text-align: center;
+    @include devices(tablet, min) {
+      position: absolute;
+      top: 0;
+      right: 2.375rem;
+      margin-top: 2.125rem;
+    }
+  }
+}
+.overlay {
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  visibility: visible;
+  z-index: 1;
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

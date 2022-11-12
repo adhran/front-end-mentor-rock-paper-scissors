@@ -1,0 +1,31 @@
+<div class="game">
+
+    <div class=" container" [ngSwitch]="playerPicked">
+        <app-waves-animation *ngIf="winner === 'YOU WIN' "></app-waves-animation>
+
+        <app-btn-rock *ngSwitchCase="'Rock'"></app-btn-rock>
+        <app-btn-scissor *ngSwitchCase="'Scissor'"></app-btn-scissor>
+        <app-btn-paper *ngSwitchCase="'Paper'"></app-btn-paper>
+
+        <p>YOU PICKED</p>
+
+    </div>
+
+
+    <div class="container" [ngSwitch]="housePicked">
+        <app-waves-animation *ngIf="winner === 'YOU LOSE'"></app-waves-animation>
+
+
+        <app-btn-rock *ngSwitchCase="'Rock'"></app-btn-rock>
+        <app-btn-scissor *ngSwitchCase="'Scissor'"></app-btn-scissor>
+        <app-btn-paper *ngSwitchCase="'Paper'"></app-btn-paper>
+
+        <p>THE HOUSE PICKED</p>
+
+    </div>
+
+    <div class="result">
+        <h1>{{winner}}</h1>
+        <button (click)="onClickPlay()">PLAY AGAIN</button>
+    </div>
+</div>

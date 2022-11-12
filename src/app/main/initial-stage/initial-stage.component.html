@@ -1,0 +1,22 @@
+<div class="game">
+
+    <div class="bg-triangle">
+        <svg width="313" height="278" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#000" stroke-width="15" fill="none" opacity=".2" d="M156.5 262 300 8H13z" />
+        </svg>
+    </div>
+
+    <div class="btn-rock" (click)="playerOnClick('Rock')">
+        <app-btn-rock></app-btn-rock>
+    </div>
+
+    <div class="btn-scissor" (click)="playerOnClick('Scissor')">
+        <app-btn-scissor></app-btn-scissor>
+    </div>
+
+    <div class="btn-paper" (click)="playerOnClick('Paper')">
+        <app-btn-paper></app-btn-paper>
+    </div>
+
+
+</div>

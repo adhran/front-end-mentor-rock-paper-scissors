@@ -1,0 +1,48 @@
+@import "_mixins";
+html {
+  font-size: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  height: 100%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.btn-game {
+  border-radius: 50%;
+  height: 8.125rem;
+  width: 8.125rem;
+  border-style: solid;
+  border-width: 1rem;
+
+  @include devices(tablet, min) {
+    height: 18.125rem;
+    width: 18.125rem;
+    border-width: 2.125rem;
+    > svg {
+      scale: 2;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<div class="footer">
+    <button (click)="onClickRules()">RULES</button>
+</div>
+
+<app-rules-page @fadeOut *ngIf="openRules" (closeRules)="onClickRules()"></app-rules-page>
