@@ -1,8 +1,3 @@
 @import "/src/_globals";
 @import "/src/_variables";
 @import "/src/_mixins";
-
-body {
-  background-image: linear-gradient(to bottom, $radial-bg);
-  background-repeat: no-repeat;
-}
